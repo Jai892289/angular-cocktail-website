@@ -1,0 +1,77 @@
+<div class="home-hero-container">
+  <div class="home-hero-content-wrapper">
+    <div class="home-hero-inner-wrapper-one">
+      <div>
+        <div class="image-border">
+          <img src="../../../assets/images/ScotchCocktail.jpg" />
+        </div>
+        <div>
+          <p class="image-caption">SCOTCH COCKTAILS</p>
+          <p class="image-header">20 Scotch Cocktails to Try Today</p>
+        </div>
+      </div>
+    </div>
+    <div class="home-hero-inner-wrapper-two">
+      <div class="row">
+        <div class="column">
+          <div class="image-border inner">
+            <img src="../../../assets/images/BottlesOfScotch.jpg" />
+          </div>
+          <p class="image-caption">SCOTCH</p>
+          <p class="image-header">8 New Single Malts to Try</p>
+        </div>
+        <div class="column">
+          <div class="image-border inner">
+            <img src="../../../assets/images/Barware.jpg" />
+          </div>
+          <p class="image-caption">DEALS & PRODUCTS</p>
+          <p class="image-header">Amazing Prime Sale Event Deals</p>
+        </div>
+      </div>
+
+      <div class="row 2">
+        <div class="column">
+          <div class="image-border inner">
+            <img src="../../../assets/images/HomeBarBasics.jpg" />
+          </div>
+          <p class="image-caption">TO KNOW</p>
+          <p class="image-header">
+            Home Bar: Everything You Need To Know About Muddlers
+          </p>
+        </div>
+        <div class="column last">
+          <p style="color: #fff">
+            Get our best cocktail recipes, tips, and more when you sign up for
+            our newsletter
+          </p>
+          <mat-form-field
+            class="mat-form-field-input"
+            appearance="fill"
+            color="#fff"
+          >
+            <mat-label>Enter your email</mat-label>
+            <input matInput />
+          </mat-form-field>
+          <!-- Note: In openSnackBar, we are getting the button text "Sign Up" -->
+          <button
+            mat-flat-button
+            color="accent"
+            #button
+            (click)="
+              openSnackBar(button._elementRef.nativeElement.textContent)
+            "
+          >
+            Sign Up
+          </button>
+          <p style="color: #fff">
+            You can opt-out at any time. For more details, see our Privacy
+            Policy
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Decided not to use the Grid List because it flex the content and center 
+aligns on both x and y axis -->

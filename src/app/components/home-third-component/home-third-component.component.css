@@ -1,0 +1,37 @@
+.home-third-component-container {
+  padding-top: 20px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background-color: rgb(234, 222, 222);
+}
+.home-third-title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.home-third-component-title {
+  text-align: center;
+  margin: 0;
+}
+.home-third-card-wrapper {
+  display: flex;
+  flex-basis: 33.33333%;
+}
+mat-card {
+  margin: 1rem;
+}
+mat-card-subtitle {
+  color: #9d2a2c;
+  font-weight: bold;
+}
+@media screen and (max-width: 700px) {
+  .home-third-component-title {
+    text-align: center;
+    margin: 0.2rem 0;
+  }
+  .home-third-card-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}

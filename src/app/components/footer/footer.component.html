@@ -1,0 +1,113 @@
+<div>
+  <div class="footer-upper-container">
+    <div>
+      <h2 class="footer-upper-title">Cocktails.com</h2>
+      <p class="footer-upper-text">
+        Get our best cocktail recipes, tips, and more when you sign up for our
+        newsletter.
+      </p>
+      <div class="footer-upper-form-wrapper">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label style="color: #fff">Enter Email</mat-label>
+          <input matInput value="" style="color: #fff" />
+        </mat-form-field>
+        <!-- This <p> will disapper on small screens -->
+        <p class="footer-upper-captions" *ngIf="getScreenWidth > 700">
+          You can opt-out at any time. For more details, see our Privacy Policy
+        </p>
+        <div class="footer-upper-btn-wrapper">
+          <button
+            mat-flat-button
+            color="accent"
+            #button
+            (click)="openSnackBar(button._elementRef.nativeElement.textContent)"
+          >
+            SIGN UP
+          </button>
+        </div>
+      </div>
+      <!-- This <div> will disappear to large screen -->
+      <div>
+        <p class="footer-upper-captions" *ngIf="getScreenWidth <= 700">
+          You can opt-out at any time. For more details, see our Privacy Policy
+        </p>
+        <!-- Refer to bottom (scroll down) for mat-grid-tile setup -->
+        <mat-grid-list cols="5" class="footer-upper-icon-wrapper">
+          <mat-grid-tile>
+            <div>
+              <mat-icon>public</mat-icon>
+            </div>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <div><mat-icon>school</mat-icon></div></mat-grid-tile
+          >
+          <mat-grid-tile>
+            <div><mat-icon>location_city</mat-icon></div></mat-grid-tile
+          >
+          <mat-grid-tile
+            ><div><mat-icon>cake</mat-icon></div></mat-grid-tile
+          >
+          <mat-grid-tile
+            ><div><mat-icon>whatshot</mat-icon></div></mat-grid-tile
+          >
+        </mat-grid-list>
+        <hr *ngIf="getScreenWidth <= 700" />
+      </div>
+    </div>
+    <div class="footer-upper-list-wrapper">
+      <mat-list>
+        <mat-list-item><p>Recipes</p></mat-list-item>
+        <mat-list-item><p>Sprints</p></mat-list-item>
+        <mat-list-item><p>Beer & Wine</p></mat-list-item>
+        <mat-list-item><p>Behind The Bar</p></mat-list-item>
+        <mat-list-item><p>The Basics</p></mat-list-item>
+        <mat-list-item><p>News</p></mat-list-item>
+        <mat-list-item><p>Shop</p></mat-list-item>
+      </mat-list>
+
+      <mat-list>
+        <mat-list-item><p>About Us</p></mat-list-item>
+        <mat-list-item><p>Terms of Use</p></mat-list-item>
+        <mat-list-item><p>Career</p></mat-list-item>
+        <mat-list-item><p>Guidelines</p></mat-list-item>
+        <mat-list-item><p>Privacy Policy</p></mat-list-item>
+        <mat-list-item>
+          <img
+            src="../../../assets/svg/privacy.svg"
+            alt="privacy feedback"
+            style="width: 100px; height: 100px"
+        /></mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+  <div class="footer-lower-container">
+    <div class="footer-lower-left-wrapper">
+      <div class="footer-lower-left-image-wrapper">
+        <!-- <img src="../../../assets/images/DotdashMeredith.jpg" /> -->
+      </div>
+      <div>
+        <p>
+          Cocktail.com is created by
+          <span class="footer-personal-link" (click)="openPersonalWebsite()"
+            >Test</span
+          >
+        </p>
+      </div>
+    </div>
+    <div>
+      <p class="warning">
+        We've updated our
+        <span class="footer-privacy-policy">Privacy Policy</span> which will go
+        in to effect on
+        {{ year }}
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- With mat-list: to make two column: -->
+<!-- https://stackoverflow.com/questions/58833607/using-angular-list-with-two-columns -->
+
+<!-- for mat-grid-list, for each mat-grid-tile we add a div to prevent
+messing with the mat-grid-tile styles -->
+<!-- https://stackoverflow.com/questions/61539051/i-am-unable-to-customize-the-style-property-with-mat-grid-tile-of-angular-materi-->
